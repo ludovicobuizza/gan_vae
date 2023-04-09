@@ -26,6 +26,7 @@ class VAE(nn.Module):
                 - strides (list): List of strides.
                 - paddings (list): List of paddings.
                 - out_channels (int): Number of output channels.
+                - final_kernel (int): Kernel size of the final layer.
 
 
         """
@@ -34,7 +35,7 @@ class VAE(nn.Module):
         self.encoder_hyper_params = encoder_hyper_params
         self.decoder_hyper_params = decoder_hyper_params
 
-        self.encoder = self._make_module(conv_layer=nn.Conv2d,
+        self.encoder = self.make_module(conv_layer=nn.Conv2d,
                                          hyper_params=encoder_hyper_params,
                                          activation=nn.LeakyReLU)
         self.fc_mu = nn.Linear(encoder_hyper_params["fc_neurons"],
