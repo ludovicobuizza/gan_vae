@@ -35,9 +35,9 @@ class VAE(nn.Module):
         self.encoder_hyper_params = encoder_hyper_params
         self.decoder_hyper_params = decoder_hyper_params
 
-        self.encoder = self.make_module(conv_layer=nn.Conv2d,
-                                         hyper_params=encoder_hyper_params,
-                                         activation=nn.LeakyReLU)
+        self.encoder = make_module(conv_layer=nn.Conv2d,
+                                   hyper_params=encoder_hyper_params,
+                                   activation=nn.LeakyReLU)
         self.fc_mu = nn.Linear(encoder_hyper_params["fc_neurons"],
                                self.latent_dims)
         self.fc_var = nn.Linear(encoder_hyper_params["fc_neurons"],
