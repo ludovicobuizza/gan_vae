@@ -83,3 +83,5 @@ class Discriminator(nn.Module):
         out = self.conv(x)
         out = self.final_layer(out)
         return out
+
+

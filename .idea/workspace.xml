@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b3a830f-6f0f-4dfa-9f13-666fc0953005" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/gan_implementation.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gan.py" beforeDir="false" afterPath="$PROJECT_DIR$/gan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vae.py" beforeDir="false" afterPath="$PROJECT_DIR$/vae.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vae_implementation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/vae_implementation.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="7b3a830f-6f0f-4dfa-9f13-666fc0953005" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +58,7 @@
       <workItem from="1680429018614" duration="1232000" />
       <workItem from="1680684214962" duration="1000" />
       <workItem from="1680944239894" duration="4718000" />
-      <workItem from="1681115117923" duration="2590000" />
+      <workItem from="1681115117923" duration="2713000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1681030578626</created>
