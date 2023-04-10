@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+
 class Generator(nn.Module):
     def __init__(self, generator_hyper_params: dict):
         """Initialise generator.
@@ -9,9 +10,16 @@ class Generator(nn.Module):
             generator_hyper_params: dictionary with generator hyperparameters
         """
         super(Generator, self).__init__()
-        gen_fm = generator_hyper_params['gen_feature_map']
+        gen_fm = generator_hyper_params["gen_feature_map"]
         self.conv = nn.Sequential(
-            nn.ConvTranspose2d(generator_hyper_params['latent_vector_size'], gen_fm * 8, 4, 1, 0, bias=False),
+            nn.ConvTranspose2d(
+                generator_hyper_params["latent_vector_size"],
+                gen_fm * 8,
+                4,
+                1,
+                0,
+                bias=False,
+            ),
             nn.BatchNorm2d(gen_fm * 8),
             nn.ReLU(True),
             # state size is (gen_fm * 8) x 4 x 4
@@ -31,22 +39,23 @@ class Generator(nn.Module):
             nn.Tanh()
             # state size is 3 x 32 x 32
         )
+
     def forward(self, z: torch.Tensor):
-        """ Forward pass through the generator."""
+        """Forward pass through the generator."""
         out = self.conv(z)
         return out
 
 
 class Discriminator(nn.Module):
     def __init__(self, discriminator_hyper_params: dict):
-        """ Initialise discriminator.
+        """Initialise discriminator.
 
         Args:
             discriminator_hyper_params: dictionary with discriminator
                                         hyperparameters
         """
         super(Discriminator, self).__init__()
-        disc_fm = discriminator_hyper_params['disc_feature_map']
+        disc_fm = discriminator_hyper_params["disc_feature_map"]
         self.conv = nn.Sequential(
             # input is 3 x 32 x 32
             nn.Conv2d(3, disc_fm, 3, 1, 1, bias=False),
@@ -64,11 +73,9 @@ class Discriminator(nn.Module):
             nn.BatchNorm2d(disc_fm * 8),
             nn.LeakyReLU(0.2, inplace=True),
             # state size is (disc_fm * 8) x 4 x 4
-
         )
-        self.final_layer  = nn.Sequential(
-            nn.Conv2d(disc_fm * 8, 1, 4, 1, 0, bias=False),
-            nn.Sigmoid()
+        self.final_layer = nn.Sequential(
+            nn.Conv2d(disc_fm * 8, 1, 4, 1, 0, bias=False), nn.Sigmoid()
         )
 
     def forward(self, x):
