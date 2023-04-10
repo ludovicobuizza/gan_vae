@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b3a830f-6f0f-4dfa-9f13-666fc0953005" name="Changes" comment="Changes" />
+    <list default="true" id="7b3a830f-6f0f-4dfa-9f13-666fc0953005" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gan.py" beforeDir="false" afterPath="$PROJECT_DIR$/gan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gan_implementation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gan_implementation.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +62,7 @@
       <workItem from="1680429018614" duration="1232000" />
       <workItem from="1680684214962" duration="1000" />
       <workItem from="1680944239894" duration="4718000" />
-      <workItem from="1681115117923" duration="2713000" />
+      <workItem from="1681115117923" duration="3076000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1681030578626</created>
@@ -87,5 +91,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gan_vae$gan.coverage" NAME="gan Coverage Results" MODIFIED="1681119462027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
