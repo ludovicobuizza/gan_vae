@@ -11,7 +11,7 @@ def make_module(conv_layer,
             conv_layer(
                 in_channels=in_channels,
                 out_channels=hyper_params["hidden_channels"][i],
-                kernel_size=hyper_params["hidden_channels"][i],
+                kernel_size=hyper_params["kernels"][i],
                 stride=hyper_params["strides"][i],
                 padding=hyper_params["paddings"][i]
             ),
